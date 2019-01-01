@@ -1,0 +1,21 @@
+➜  ~ docker run -d nginx
+5e7e5c7bfa3b7b5b2f82a614ebd1ad6c2594e845e41a38a499cf88fa5ff24bac
+➜  ~ docker run -d nginx
+c90f62e8e6a72d7bb5a637ce492bf917bb62685ffe9c192414127ed64662976d
+➜  ~ docker run -d nginx
+dbe17a4c75526aa3fe7aa57f2074851f3d3dd301f263bffeb486a02205881439
+➜  ~ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+dbe17a4c7552        nginx               "nginx -g 'daemon of…"   3 seconds ago       Up 2 seconds        80/tcp              distracted_minsky
+c90f62e8e6a7        nginx               "nginx -g 'daemon of…"   4 seconds ago       Up 3 seconds        80/tcp              condescending_sammet
+5e7e5c7bfa3b        nginx               "nginx -g 'daemon of…"   6 seconds ago       Up 5 seconds        80/tcp              cocky_germain
+➜  ~ docker stop dbe17a4c7552
+dbe17a4c7552
+➜  ~ docker stop c90f62e8e6a7
+c90f62e8e6a7
+➜  ~ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+dbe17a4c7552        nginx               "nginx -g 'daemon of…"   50 seconds ago      Exited (0) 11 seconds ago                       distracted_minsky
+c90f62e8e6a7        nginx               "nginx -g 'daemon of…"   51 seconds ago      Exited (0) 3 seconds ago                        condescending_sammet
+5e7e5c7bfa3b        nginx               "nginx -g 'daemon of…"   53 seconds ago      Up 52 seconds               80/tcp              cocky_germain
+➜  ~
