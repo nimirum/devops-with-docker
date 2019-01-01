@@ -1,0 +1,28 @@
+➜  devops-with-docker git:(master) ✗ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS                     PORTS               NAMES
+f283d7b49f96        nginx               "nginx -g 'daemon of…"   39 seconds ago       Exited (0) 5 seconds ago                       laughing_shannon
+27207e60c8e4        nginx               "nginx -g 'daemon of…"   41 seconds ago       Exited (0) 5 seconds ago                       inspiring_nobel
+2ff3ff71815d        nginx               "nginx -g 'daemon of…"   About a minute ago   Exited (0) 5 seconds ago                       suspicious_bhabha
+➜  devops-with-docker git:(master) ✗ docker container prune
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+f283d7b49f96ab2fa7eec5cd227ad4f5ad6c01ab67f9b5809b8e6440c4f902c1
+27207e60c8e4a605693d8c282f499d261855e5c8cb91bb8bd4d3400b8748eb28
+2ff3ff71815d48eae55efe9565e216cc24bedbd748221f451ee8cfee3846c69a
+
+Total reclaimed space: 0B
+➜  devops-with-docker git:(master) ✗ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+➜  devops-with-docker git:(master) ✗ docker images
+REPOSITORY                               TAG                 IMAGE ID            CREATED             SIZE
+nginx                                    latest              7042885a156a        3 days ago          109MB
+➜  devops-with-docker git:(master) ✗ docker rmi 7042885a156a
+Untagged: nginx:latest
+Untagged: nginx@sha256:b543f6d0983fbc25b9874e22f4fe257a567111da96fd1d8f1b44315f1236398c
+Deleted: sha256:7042885a156a01cc99e5a531f41ff47ea2facf655d4fc605aa80b216489586a4
+Deleted: sha256:fb06e7fd070131bf49b9c5558eb0b3beecb698b5122e6d989c1a1cc009710d2d
+Deleted: sha256:cc266db60daae61318dc085eeb60a3c6a876d6fc75f9fa7d7f7f9a47d4353f33
+Deleted: sha256:7b4e562e58dcb7fbe1e27bb274f0ff8bfeb2fd965203380436e159df9f218900
+➜  devops-with-docker git:(master) ✗ docker images
+REPOSITORY                               TAG                 IMAGE ID            CREATED             SIZE
