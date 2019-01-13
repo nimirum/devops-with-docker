@@ -1,0 +1,2 @@
+docker build -t ex1_5 .
+docker run --rm -p 5000:5000 ex1_5
